@@ -6,6 +6,11 @@ The artifact demonstrates how quantum experts and beginners model quantum applic
 
 The goal is to collaboratively model Grover's search algorithm to find the element 1.
 
+The demonstration video illustrated the below use case:
+
+▶️ **Demo:** [https://youtu.be/itQvH99c-lk](https://youtu.be/itQvH99c-lk)
+
+[![Demo Video](docs/graphics/thumbnail.png)(https://youtu.be/itQvH99c-lk)]
 ---
 
 ## Overview
@@ -77,10 +82,12 @@ Connect all the tasks together.
 
 ![Oracle](docs/graphics/4_Grover.png)
 
-## 7. Add Measurement
+## 7. Add Measurement & missing attributes
 
 Open the "Boundary Elements" category and drag the "Measurement" out.
-Connect all the "Diffuser" to the "Measurement".
+Connect the "Diffuser" to the "Measurement".
+
+Furthermore, let the other user add the size & oracle value and observe that the model gets synchronized.
 ![Measurement](docs/graphics/5_Measurement.png)
 
 ---
