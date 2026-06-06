@@ -4,6 +4,8 @@ This repository accompanies the QUANCOM 2026 demo paper and provides a research 
 
 The artifact demonstrates how quantum experts and beginners model quantum applications collaboratively to increase the number of available models but also to laern each others vocabulary.
 
+The goal is to collaboratively model Grover's search algorithm to find the element 1.
+
 ---
 
 ## Overview
@@ -21,40 +23,18 @@ Middleware for the execution of quantum circuits on different quantum cloud prov
 
 ---
 
-## 1. Start the Quantum Low-Code Modeler
+## 1. Start the Services
 
-Run the following commands to start the Quantum Low-Code Modeler:
-
-```
-git clone https://github.com/AnonymousUserAccount958/low-code-modeler.git
-npm run dev
-```
----
-
-## 2. Start the Quantum Low-Code Backend
-
-Run the following commands to start the Quantum Low-Code Backend:
+Run the following commands to start all services:
 
 ```
-git clone https://github.com/AnonymousUserAccount958/leqo-backend.git
-npm run dev
-```
-
----
-
-## 3. Start Qunicorn
-
-Run the following commands to start tQunicorn
-
-```
-git clone https://github.com/qunicorn/qunicorn-core.git
+git clone https://github.com/LaviniaStiliadou/2026-quancom.git
+cd docker
 docker-compose up
 ```
-
 ---
 
-
-## 4. Open the Quantum Low-Code Modeler
+## 2. Open the Quantum Low-Code Modeler
 
 Open the Quantum Low-Code Modeler at http://localhost:4242.
 
@@ -64,44 +44,77 @@ You should see the Modeler start screen:
 
 ---
 
-## 5. Open a second tab of the Quantum Low-Code Modeler
+## 3. Open a second tab of the Quantum Low-Code Modeler
 
-Open a second tab of the Quantum Low-Code Modeler at http://localhost:4242.
+Open a second tab of the Quantum Low-Code Modeler at http://localhost:4242 and configure this user as expert.
 
 You should see the Modeler start screen:
 
-![Modeler Initial](docs/graphics/0_ModelerOverview.png)
+![Modeler Initial](docs/graphics/1_ConfigureExpertMode.png)
 
 ---
 
-## 6. Start the collaborative mode in both modeler
+## 4. Start the collaborative mode in both modeler
 
-Click on "Experience Mode" and enable "Collaborative Mode"
+Click on "Experience Mode" and enable "Collaboration Mode".
+As illustrated in the picture, you should see now two users and two cursors.
 
+![Enable Collaboration](docs/graphics/2_EnableCollaboration.png)
 ---
 
 
-## 7. Import the Model
+## 5. Start Modeling
 
-Import the ![model](models/grover.json).
+Open the "Boundary Elements" category and drag the "Prepare State" out.
+In case you want to skip the modeling, you can directly import the ![model](models/grover.json)
+![Prepare State](docs/graphics/3_PrepareState.png)
 
-After loading, the model should resemble the example shown below.
-![Import Model](docs/graphics/5_ModelImport.png)
+
+## 6. Add Oracle & Diffuser 
+
+Open the "Operators" category with the subcategory "Quantum operators" and drag the "Oracle" and "Grover Diffuser" out.
+Connect all the tasks together.
+
+![Oracle](docs/graphics/4_Grover.png)
+
+## 7. Add Measurement
+
+Open the "Boundary Elements" category and drag the "Measurement" out.
+Connect all the "Diffuser" to the "Measurement".
+![Measurement](docs/graphics/5_Measurement.png)
 
 ---
 
 ## 8. Transform the Model
 
 Click "Send to Backend" to transform the domain model into an executable circuit.
-![Transform](docs/graphics/6_Transformation.png)
+![Transform](docs/graphics/6_SendToBackend.png)
 
+Now the validation opens up, but these are only warnings that can be skipped, so click on "Continue".
+![Validation](docs/graphics/6_SendToBackendValidation.png)
+
+Select "OpenQASM3" as transformation target.
+![Validation](docs/graphics/7_SendToBackendOpenqasm.png)
 ---
 
-## 9. Transform the Model
+## 9. Execute the Model
 
-Click "History" and click on "Execute Circuit". Then select every blue button and you should see the execution result.
-![Download Result](docs/graphics/7_WorkflowDownload.png)
+Click "History".
+![Execute](docs/graphics/8_History.png)
 
+Now select the model that you want to execute by clicking on "Execute Circuit". 
+![Download Result](docs/graphics/9_HistoryValidation.png)
+
+Continue by clicking the blue buttons to start the execution.
+![Download Result](docs/graphics/10_ExecutionStart.png)
+![Download Result](docs/graphics/11_QunicornDeployment.png)
+![Download Result](docs/graphics/12_QunicornDeployment2.png)
+---
+
+## 10. View the Result 
+
+When the execution is finished, you can see that the element "1" is found.
+![Result](docs/graphics/13_QunicornExecutionResult.png)
 ---
 
 
