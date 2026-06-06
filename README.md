@@ -10,7 +10,7 @@ The demonstration video illustrated the below use case:
 
 ▶️ **Demo:** [https://youtu.be/itQvH99c-lk](https://youtu.be/itQvH99c-lk)
 
-[![Demo Video](docs/graphics/thumbnail.png)(https://youtu.be/itQvH99c-lk)]
+[![Demo Video](docs/graphics/thumbnail.png)](https://youtu.be/itQvH99c-lk)
 ---
 
 ## Overview
