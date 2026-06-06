@@ -94,6 +94,7 @@ Now the validation opens up, but these are only warnings that can be skipped, so
 ![Validation](docs/graphics/6_SendToBackendValidation.png)
 
 Select "OpenQASM3" as transformation target.
+
 ![Validation](docs/graphics/7_SendToBackendOpenqasm.png)
 ---
 
@@ -106,6 +107,7 @@ Now select the model that you want to execute by clicking on "Execute Circuit".
 ![Download Result](docs/graphics/9_HistoryValidation.png)
 
 Continue by clicking the blue buttons to start the execution.
+
 ![Download Result](docs/graphics/10_ExecutionStart.png)
 ![Download Result](docs/graphics/11_QunicornDeployment.png)
 ![Download Result](docs/graphics/12_QunicornDeployment2.png)
@@ -114,6 +116,7 @@ Continue by clicking the blue buttons to start the execution.
 ## 10. View the Result 
 
 When the execution is finished, you can see that the element "1" is found.
+
 ![Result](docs/graphics/13_QunicornExecutionResult.png)
 ---
 
